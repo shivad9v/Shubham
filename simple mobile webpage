@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Mobile Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Show and hide content
+      $(".nav-link").click(function() {
+        var target = $(this).data("target");
+        $(".content").hide();
+        $("#" + target).show();
+      });
+    });
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    .nav {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      display: inline-block;
+      background-color: #f2f2f2;
+      color: #333;
+      padding: 5px 10px;
+      margin: 0 5px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .content {
+      padding: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Simple Mobile Website</h1>
+  </div>
+  <div class="nav">
+    <a href="#" class="nav-link" data-target="home">Home</a>
+    <a href="#" class="nav-link" data-target="about">About</a>
+    <a href="#" class="nav-link" data-target="contact">Contact</a>
+  </div>
+  <div class="content" id="home">
+    <h2>Welcome to the Home Page</h2>
+    <p>This is the content of the home page.</p>
+  </div>
+  <div class="content" id="about">
+    <h2>About Us</h2>
+    <p>This is the content of the about page.</p>
+  </div>
+  <div class="content" id="contact">
+    <h2>Contact Information</h2>
+    <p>This is the contact page.</p>
+  </div>
+</body>
+</html>
